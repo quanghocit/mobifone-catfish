@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MegaNet FreeWifi - Catfish</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="https://content.meganet.com.vn/resource/demo/agency/isobar/standard/standard_1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://content.meganet.com.vn/resource/demo/agency/isobar/standard/standard_1/css/swiper.min.css">
+    <style type="text/css">
+        html, body {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #textWifi:hover{
+                cursor: pointer;
+        }
+        .col-xs-6 {
+            padding: 2px;
+        }
+        .col-xs-12 {
+            padding: 2px;
+        }
+        .form-control{
+                width: 530px;
+                height: 28px;
+        }
+        span{
+            text-align: left;
+        }
+
+        @media screen and (min-width: 100px) {
+            .divAll{
+                position: absolute;
+                width: 100%;
+            }
+            .swiper-container {
+                width: 73.7%;
+                left: 1.8%;
+                margin-top: 40%;
+            }
+            .swiper-slide {
+                text-align: center;
+                background: #fff;
+            }
+
+            .frame_mobile{
+                position: absolute;
+                width: 100%;
+                z-index: 999;
+            }
+            .frame1{
+                z-index: 1;       
+            }
+            .frame2{
+                z-index: 2;   
+            }
+            .frame2_5{
+                z-index: 3;   
+            }
+            .frame3{
+                z-index: 4;   
+            }
+            .frame4{
+                z-index: 5;   
+            }
+            .frame5{
+                z-index: 6;   
+            }
+            .frame6{
+                z-index: 7;   
+            }
+            .img_step{
+                position: absolute;
+                width: 73.4%;
+                left: 15%;
+                margin-top: 22.8%;
+                
+            }
+            .img_step2{
+                margin-top: 20%;
+            }
+            .img_step3{
+                margin-top: 23%;
+            }
+            .img_step4{
+                margin-top: 0%;
+            }
+            .img_step5{
+                margin-top: 0%;
+            }
+            .img_step6{
+                margin-top: 0%;
+            }
+            .img_step7{
+                margin-top: 0%;
+            }
+            #textWifi{
+                position: absolute;
+                top: 45%;
+                left: 22%;
+                width: 50%;
+                height: 5%;
+                z-index: 999999;
+                color: transparent;       
+            }    
+        }
+
+        @media screen and (min-width: 768px) {
+            
+        }
+
+        @media screen and (min-width: 1024px) {
+            .swiper-container {
+
+            }
+            .swiper-slide {
+                text-align: center;
+                background: #fff;
+            }
+            
+        } 
+
+        @media screen and (min-width: 1025px) {
+            .divAll{
+                position: absolute;
+                width: 100%;
+            }
+            .swiper-container {
+                width: 20.56%;
+                left: 4.22%;
+                margin-top: 11.3%;
+            }
+            .swiper-slide {
+                text-align: center;
+                background: #000;
+            }
+            .frame_mobile{
+                position: absolute;
+                width: 28%;
+                z-index: 999;
+            }
+            .frame1{
+                z-index: 1;       
+            }
+            .frame2{
+                z-index: 2;   
+            }
+            .frame2_5{
+                z-index: 3;   
+            }
+            .frame3{
+                z-index: 4;   
+            }
+            .frame4{
+                z-index: 5;   
+            }
+            .frame5{
+                z-index: 6;   
+            }
+            .frame6{
+                z-index: 7;   
+            }
+            .img_step{
+                position: absolute;
+                width: 20.6%;
+                left: 4.2%;
+                margin-top: 6.4%;
+                
+            }
+            .img_step2{
+                margin-top: 20.5%;
+            }
+            .img_step3{
+                margin-top: 25%;
+            }
+
+            #textWifi{
+                position: absolute;
+                top: 45%;
+                left: 23%;
+                width: 100%;
+                z-index: 999999;
+                color: transparent;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="divAll">
+        <div class="frame_mobile">
+            <div class="frame1" onclick="click_step1()">
+                <img src="frame_ip.png" width="100%">
+            </div>
+            <div class="frame2" style="display: none" onclick="click_step2()">
+                <img src="frame_ip1.png" width="100%">
+            </div>
+            <div class="frame2_5" style="display: none" onclick="clickstep1_5()">
+                <img src="frame_ip1.png" width="100%">
+            </div>
+            <div class="frame3" style="display: none" onclick="click_step3()">
+                <img src="frame_ip2.png" width="100%">
+            </div>
+            <div class="frame4" style="display: none" onclick="click_step4();">
+                <img src="frame_ip.png" width="100%">
+            </div>
+            <div class="frame5" style="display: none" onclick="click_step5();">
+                <img src="frame_ip.png" width="100%">
+            </div>
+            <div class="frame6" style="display: none" onclick="click_step6();">
+                <img src="frame_ip.png" width="100%">
+            </div>
+            <!-- <span id="textWifi" onclick="click_step1()"> MegaNet - Freewifi</span> -->
+        </div>
+        <div class="img_step">
+            <div class="step1">
+                <img src="step1.jpg" width="100%">
+            </div>
+            <div class="step1_5" style="display: none">
+                <img src="step1_5.jpg" width="100%">
+            </div>
+            <div class="img_step2" style="display: none">
+                <img src="step2_5.jpg" width="100%">
+            </div>
+            <div class="img_step3" style="display: none" >
+                <img src="step3.jpg" width="100%">
+            </div>
+            <div class="img_step4" style="display: none">
+                <img src="slide1.jpg" width="100%">
+            </div>
+            <div class="img_step5" style="display: none">
+                <img src="slide2.jpg" width="100%">
+            </div>
+            <div class="img_step6" style="display: none">
+                <img src="slide3.jpg" width="100%">
+            </div>
+           
+        
+        </div>
+        <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="mobile1.png" width="100%" id="img_1" style="display: none">
+                <img src="mobile2.png" width="100%" id="img_2" style="display: none">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="https://content.meganet.com.vn/resource/demo/agency/isobar/standard/standard_1/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://content.meganet.com.vn/resource/demo/agency/isobar/standard/standard_1/js/jquery-3.2.1.min.js"></script>     
+    <img src="" style="display: none" id="m_impression">
+    <script type="text/javascript">
+        $.fn.extend({
+            animateCss: function (animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function() {
+                    $(this).removeClass('animated ' + animationName);
+                });
+            }
+        });
+
+        var banner_m_width      = 800,
+            banner_m_height     = 1250,
+            banner_l_width      = 800,
+            banner_l_height     = 1250;
+
+        var window_width    = window.innerWidth,
+            window_height   = window.innerHeight;
+
+        var img_m_width     = window_width,
+            img_m_height    = window_width * banner_m_height / banner_m_width,
+            img_l_height    = window_height,
+            img_l_width     = window_height * banner_l_width / banner_l_height;
+
+        // if (screen.width >= 1024) {
+        //     $("#img_1").attr("src","http://content.meganet.com.vn/resource/demo/ag/ad/sunshine/sunshine_city/mobile.jpg");
+        // } else {
+        //     $("#img_1").attr("src","http://content.meganet.com.vn/resource/demo/ag/ad/sunshine/sunshine_city/mobile.jpg");
+        // }
+        if (screen.width > 1024) {
+            //$(".swiper-container").css("width", img_l_width + "px");
+            $(".swiper-container").css("margin-left", (window_width - img_l_width)/2 + "px");
+            $(".frame_mobile").css("margin-left", (window_width - img_l_width)/2 + "px");
+            $(".img_step").css("margin-left", (window_width - img_l_width)/2 + "px");
+        } else {
+            if (screen.width > 960) {
+            } else {
+            }
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            effect: 'slide',
+            speed: 1000,
+            autoplay: 2000,
+            loop: false,
+            autoplayDisableOnInteraction: false,
+            onSlideChangeEnd: function (swiper) {
+                if (swiper.activeIndex == 2) {
+                    swiper.stopAutoplay()
+                }
+            }
+        });
+
+        function validateEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email);
+        }
+
+        function validatePhone(phone) {
+            var flag = false;
+            var phone = $('#iPhone').val().trim(); // ID của trường Số điện thoại
+            phone = phone.replace('(+84)', '0');
+            phone = phone.replace('+84', '0');
+            phone = phone.replace('0084', '0');
+            phone = phone.replace(/ /g, '');
+            if (!phone) {
+                return;
+            }
+            var firstNumber = phone.substring(0, 2);
+            if ((firstNumber == '09' || firstNumber == '08') && phone.length == 10) {
+                flag = true;
+            } else if (firstNumber == '01' && phone.length == 11) {
+                flag = true;
+            }
+            return flag;
+        }
+        
+        function checkName(){
+            if(!$("#iName").val()){
+                $('#error1').show();
+                return false;
+            } else{
+                $('#error1').hide();
+                return true;    
+            }
+            // register();
+        }
+        function checkPhone(){
+            if(!validatePhone($("#iPhone").val())){
+                $('#error2').show();
+                return false;
+            } else{
+                $('#error2').hide();
+                return true;
+            }
+            // register();
+        }
+        function checkEmail(){
+            if(!validateEmail($("#iEmail").val())){
+                $('#error3').show();
+                return false;
+            } else{
+                $('#error3').hide();
+                return true;
+            }
+            // register();
+        }
+
+        function checkinput(){
+            if($("#iName").val() && $("#iPhone").val() && $("#iEmail").val()){
+                $(".btn_login").hide();
+                $(".btn_register").addClass('col-xs-push-3');
+               
+            } else{
+                $(".btn_login").show();
+                $(".btn_register").removeClass('col-xs-push-3');
+            }
+
+        }
+        function register() {
+            if(checkName() && checkPhone() && checkEmail()){
+                click_step2();
+            } else{
+
+            }
+        }
+
+        function click_step1() {
+            $('#textWifi').hide();
+            $('.step1').hide(); 
+            $('.step1_5').show();
+            setTimeout(function(){
+                $('.step1_5').hide();
+                $('.frame1').hide();
+                $('.frame2_5').show();
+                $('#img_1').animateCss('fadeIn');
+                $('#img_1').show();
+            },2000)
+        }
+
+        function clickstep1_5(){
+            $('#img_1').hide();
+            $('.frame2').show();
+            $('.frame2_5').hide();
+            $('#img_2').animateCss('fadeIn');
+            $('#img_2').show();
+        }
+
+        function click_step2(){
+            $('.swiper-container').hide();
+            setTimeout(function(){
+                $('.img_step2').animateCss('fadeIn');
+                $('.img_step2').show();
+            })
+            setTimeout(function(){
+                $('.img_step2').hide();
+                $('.frame2').hide();
+                $('.frame3').show();
+                $('.img_step3').animateCss('fadeIn');
+                $('.img_step3').show();
+            },2000)
+            
+        }
+
+        function click_step3(){
+            $('.img_step3').hide();
+            $('.frame3').hide();
+            $('.frame4').show();
+            $('.img_step4').show();
+            $('.img_step4').animateCss('fadeIn');
+        }
+
+        function click_step4(){
+            $('.img_step4').hide();
+            $('.img_step5').animateCss('fadeIn');
+            $('.img_step5').show();
+            $('.frame4').hide();
+            $('.frame5').show();
+        }
+
+        function click_step5(){
+            $('.img_step5').hide();
+            $('.frame5').hide();
+            $('.frame6').show();
+            $('.img_step6').show();
+            $('.img_step6').animateCss('fadeIn');
+        }
+
+        // function click_step6(){
+        //     $('.img_step6').hide();
+        //     $('.img_step7').show();
+        //     $('.img_step7').animateCss('fadeIn');
+        // }
+
+ 
+        function login() {
+            var linkTracking = m.urlFor('click');
+            $("#formLogin1").attr("action","/wifi/login");
+            $("#redirect1").val(linkTracking);
+            $("#formLogin1").submit();
+            //window.location="http://city.sunshinegroup.vn/";
+        }
+
+    </script>
+</body>
+</html>
